@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereIsISS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="cPB-dy-1fy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iss" translatesAutoresizingMaskIntoConstraints="NO" id="wqX-S6-LjS">
+                                <rect key="frame" x="137.5" y="411" width="139" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="0LA-dd-pCV"/>
+                                    <constraint firstAttribute="height" constant="74" id="neh-ya-BKs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPB-dy-1fy" secondAttribute="trailing" id="1wT-g1-dlf"/>
+                            <constraint firstItem="cPB-dy-1fy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ar-o5-f07"/>
+                            <constraint firstItem="wqX-S6-LjS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LQ6-JY-E79"/>
+                            <constraint firstItem="cPB-dy-1fy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="Uw1-6u-gZn"/>
+                            <constraint firstItem="wqX-S6-LjS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XK6-bE-wz0"/>
+                            <constraint firstItem="wqX-S6-LjS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hmC-gX-SlJ"/>
+                            <constraint firstItem="cPB-dy-1fy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="zIj-wl-9wY"/>
+                            <constraint firstItem="wqX-S6-LjS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zU7-Px-xan"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="cPB-dy-1fy" id="LHp-jC-YQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iss" width="640" height="449"/>
+    </resources>
+</document>
